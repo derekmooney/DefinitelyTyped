@@ -110,6 +110,7 @@ interface SinonStub extends SinonSpy {
 	yieldsToAsync(property: string, ...args: any[]): SinonStub;
 	yieldsToOnAsync(property: string, context: any, ...args: any[]): SinonStub;
 	withArgs(...args: any[]): SinonStub;
+    onCall(index: number): SinonStub;
 }
 
 interface SinonStubStatic {
