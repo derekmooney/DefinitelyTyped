@@ -2663,7 +2663,7 @@ interface JQuery {
      * @param events One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false. Rest parameter args is for optional parameters passed to jQuery.trigger(). Note that the actual parameters on the event handler function must be marked as optional (? syntax).
      */
-    on(events: string, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
+    on(events: string, handler: Function): JQuery;
     /**
      * Attach an event handler function for one or more events to the selected elements.
      *
@@ -2671,7 +2671,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(events: string, selector: string, handler: (eventObject: JQueryEventObject) => any): JQuery;
+    on(events: string, selector: string, handler: Function): JQuery;
     /**
      * Attach an event handler function for one or more events to the selected elements.
      *
@@ -2680,7 +2680,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(events: string, selector: string, data: any, handler: (eventObject: JQueryEventObject) => any): JQuery;
+    on(events: string, selector: string, data: any, handler: Function): JQuery;
     /**
      * Attach an event handler function for one or more events to the selected elements.
      *
@@ -2696,7 +2696,7 @@ interface JQuery {
      * @param events A string containing one or more JavaScript event types, such as "click" or "submit," or custom event names.
      * @param handler A function to execute at the time the event is triggered.
      */
-    one(events: string, handler: (eventObject: JQueryEventObject) => any): JQuery;
+    one(events: string, handler: Function): JQuery;
     /**
      * Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
      *
